@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="width:75%;height: 50%">
+    <h1 style="text-align: center">Favorite number </h1>
+  <canvas id="myChart">
+
+  </canvas>
+    <h1 style="text-align: center">Pet </h1>
+
+    <canvas id="myChart2"></canvas>
+    <h1 style="text-align: center">Age Group </h1>
+
+    <canvas id="myChart3"></canvas>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  var ctx=document.getElementById('myChart');
+  var myChart= new Chart(ctx,{
+   type:'doughnut',
+    data:{
+     labels:['1-10','11-20','21-30','31-40','41-50','51-60'],
+      datasets:[{
+       label:'Favorite number',
+        data:[150,30,12,53,13,60],
+        backgroundColor:[
+                'rgb(179,34,34)',
+          'rgb(28,47,140)',
+          'rgb(91,45,138)',
+            'rgb(63,142,109)',
+            'rgb(214,194,113)',
+            'rgb(239,127,46)'
+        ],
+        hoverOffset:1
+      }]
+    }
+  });
+</script>
+<script>
+  var cty=document.getElementById('myChart2');
+  var myChart2= new Chart(cty,{
+    type:'pie',
+    data:{
+      labels:['Dog','Duck','Bunny','Snake','Fish','Cat'],
+      datasets:[{
+        label:'My First Pie',
+        data:[50,12,78,4,30,60],
+        backgroundColor:[
+          'rgb(179,34,34)',
+          'rgb(28,47,140)',
+          'rgb(91,45,138)',
+          'rgb(211,187,68)',
+            'rgb(147,188,103)',
+            'rgb(200,73,144)',
+            'rgba(239,184,89,0.39)',
+            'rgb(220,201,192)'
+        ],
+        hoverOffset:1
+      }]
+    }
+  });
+</script>
+<script>
+  var ctz=document.getElementById('myChart3');
+  var myChart= new Chart(ctz,{
+    type:'polarArea',
+    data:{
+      labels:['1-10','11-20','21-30','31-40','41-50','51-60'],
+      datasets:[{
+          label: 'Polar Area Chart ',
+          data: [30,60,42,40,20,10],
+          backgroundColor: [
+              'rgb(179,34,34)',
+              'rgb(28,140,84)',
+              'rgb(89,71,66)',
+              'rgb(211,187,68)',
+          'rgb(42,70,188)',
+          'rgb(143,59,149)',
+          'rgb(191,128,128)']
+      }]
+
+    }
+  })
+</script>
+</body>
+</html>
